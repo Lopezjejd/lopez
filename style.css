@@ -255,10 +255,12 @@ text-shadow:  0 0 3px var(--color-white);
 }
 /*------------------------------------SKILLS SECCION ------------------------------*/
 
-.skills__contaiener{
-    width: 100%;
-    display: flex;
-   
+.skills__container{
+    padding: 20px;
+ max-width: 1200px;
+   text-align: center;
+   margin: auto;
+   position: relative;
 }
 .skills__tittle{
     text-align: center;
@@ -267,22 +269,44 @@ text-shadow:  0 0 3px var(--color-white);
     font-size: 1.5rem;
     text-shadow:0 0 3px #FF6F3C;
 }
+.flecha-isq img,.flecha-der img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.flecha-der{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 999;
+}
+.flecha-isq{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 999;
+}
 .skills__grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px,300px));
-    grid-auto-rows: 250px;
-    padding: 20px;
-    gap: 15px;
-    max-width: 1440px;
-    margin: auto;
-    justify-content: center;
-    align-content: center;
+ 
+  max-width: 100%;
+  display:flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  max-width: fit-content;
+  padding-top:30px ;
+  
+  gap: 10px;
+ 
 }
 .grid__item{
+    flex-shrink: 0;
+    width: 32.5%;
+    height: 300px;
     flex-flow: column nowrap;
     background-color: #070707;
    text-align: center;
-   box-shadow: 0 0 2px #ffffff;
+   
+   /*
 position: relative;
    view-timeline: --plan ;
     view-timeline-axis: block;
@@ -291,10 +315,11 @@ position: relative;
     animation-name: come;
     animation-fill-mode:both;
     animation-timing-function:ease-out;
+    */
     transition: transform .3s;
 }
 .grid__item:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .item__img-container{
     width: 100%;
@@ -316,7 +341,7 @@ position: relative;
 }
 .grid__item p{
     color: #FFFFFF;
-    padding: 10px;
+    padding: 5px;
     font-size:1.1rem
 }
 
@@ -448,7 +473,10 @@ background-color: var(--color-orange);
     justify-content: start;
     gap: 20px;
 }
-
+.item__img-container{
+    height: 30%;/*imagenes adaptables*/
+   
+}
 .nav__ul{
     flex-direction: column;
     justify-content:start ;
@@ -472,6 +500,10 @@ background-color: var(--color-orange);
 @media (max-width: 768px) {
     .plan-card {
       width: 100%;
+    }
+    .item__img-container{
+        height: 30%;/*imagenes adaptables*/
+       
     }
 }
 /*-----------------ANIMATION SECCION -----------------*/
