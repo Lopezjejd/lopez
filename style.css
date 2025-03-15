@@ -114,7 +114,7 @@ main{
     width: 40%;
     height: 90vh;
     opacity: .9;
-    transition: all .5s ease-out;
+    transition: all .5s ease;
 }
 .show-menu{
     left: 0;
@@ -274,6 +274,21 @@ text-shadow:  0 0 3px var(--color-white);
     text-align: center;
     height: fit-content;
 }
+.skills__indicators button{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--color-orange);
+    background-color: transparent;
+    cursor: pointer;
+    margin: 5px;
+}
+.skills__indicators button:hover{
+    background-color: var(--color-orange);
+}
+.activo{
+    background-color: var(--color-orange);
+}
 .flecha-isq img,.flecha-der img{
     width: 30px;
     height: 30px;
@@ -286,20 +301,18 @@ text-shadow:  0 0 3px var(--color-white);
     z-index: 999;
 }
 .flecha-isq{
+    transform: rotate(180deg);
     position: absolute;
     left: 0;
     top: 50%;
     z-index: 999;
 }
 .skills__grid{
- 
-  max-width: 100%;
   display:flex;
   flex-flow: row nowrap;
   overflow: hidden;
-  max-width: fit-content;
-  padding-top:30px ;
   
+  padding-top:30px ;
   gap: 10px;
  
 }
