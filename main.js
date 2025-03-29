@@ -1,4 +1,4 @@
-
+//hola
 const menuButton = document.getElementById('nav__button');
 const nav = document.querySelector('.nav__ul');
 const navOriginalContainer = nav.parentElement; // Guarda el contenedor original del nav
@@ -46,7 +46,7 @@ function crearSlider({
     console.error('❌ Error: Algunos elementos del slider no fueron encontrados.');
     return;
   }
-
+// corregir el scroll
   let gap = parseFloat(window.getComputedStyle(fila).gap) || 0;
   let casillas = window.innerWidth <= 800 ? casillasMovil : casillasEscritorio;
   let desplazamiento = (items[0].offsetWidth + gap) * casillas;
